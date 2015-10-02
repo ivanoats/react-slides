@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React in 45 mins</title>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Lato|Fira+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Lato'; }
+      h1, h2, h3 {
+        font-family: 'Lato';
+        font-weight: normal;
+      }
+      li {
+        line-height: 2em;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-slide-content h1 {
+        font-size: 4em;
+      }
+      .remark-code-line {
+        font-size: 1.8em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+      class: middle
+      <img style="margin-top: 30px; float: right; width: 30%; height: auto" src="react-logo.png">
+      # React Workshop
+      ## A quick, hands-on introduction.
+
+      Ivan Storck
+
+      http://blog.ivanstorck.com
+
+      http://abid.es/react45min
+      ---
+
+      # Questions for You
+      How many of you know....?
+      - HTML
+      --
+
+      - CSS
+      --
+
+      - JavaScript
+      --
+
+      - jQuery
+      --
+
+      - A JS Framework like Backbone, Angular, or Ember
+      --
+
+      - A server side framework like .NET, Rails, or Django
+      - What's your "daily driver"? WordPress? Drupal? .NET?
+      ---
+
+      # Who uses ReactJS?
+      --
+
+      - Billions of people on Facebook...
+      --
+
+      - Imugr
+      --
+
+      - Netflix
+      --
+
+      - AirBnB
+      --
+
+      - Wunderground
+      --
+
+      - *a large coffee retailer from Seattle*
+      ---
+
+      # Why React?
+      - Fast
+      - Flexbile
+      - Solid principles from Computer Science
+      	- [Cohesion](https://en.wikipedia.org/wiki/Single_responsibility_principle) (SRP)
+      	- <a href="https://en.wikipedia.org/wiki/Function_composition_(computer_science)">Composition</a>
+        - [Reusable components](https://twitter.com/reactjsnpm)
+      	- [Immutability](http://reactkungfu.com/2015/08/pros-and-cons-of-using-immutability-with-react-js/)
+      	- [Functional Reactive Programming](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome) (FRP)
+      - Small API surface = easy to understand and master
+
+      ---
+      # Setup
+      - Ideally, you have node and webpack already installed
+        - brew (or apt-get) install node, or windows download the installer
+
+      - But we will use CodePen to start to make it easy
+      ---
+      # It's just JavaScript
+
+      ## It's a User Interface library
+      Lots of people use React as part of a larger architecture.
+
+      React makes no assumptions about the rest of your technology stack, it's easy to try it out on a small feature in an existing project.
+
+      1. http://codepen.io/ivanoats/pen/XmMbPq
+      2. http://codepen.io/ivanoats/pen/rOyNbX
+      ---
+      # CreateElement
+      ```flow
+      React.createElement(
+        string/ReactClass type,
+        [object props],
+        [children ...]) -> ReactElement
+      ```
+      ---
+      # JSX is an Abomination....?
+      It *looks like* we are going back to the "bad old days" of mixing style and behavior with semantic markup.
+
+      ## JSX is really freakin' awesome and I'm never using anything else
+      It actually enables cohesion (clarity) like never before.
+
+
+      ---
+      # Props
+      Use props (this.props) to access parameters passed from the parent.
+
+      ---
+      # State
+      Use states (this.state) to manage dynamic data.
+
+      ---
+      # State vs. Props
+
+      ---
+      # Component Lifecycle
+      ---
+      # React Router
+      ---
+      # Flux or Redux
+
+      The answer is Redux.
+
+      https://github.com/happypoulp/redux-tutorial
+      http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html
+      https://github.com/GetExpert/redux-blog-example
+      https://github.com/davidchang/redux-pokedex
+      ---
+      # Brunch
+      ```
+      npm -g i brunch
+      brunch new gh:ryansobol/brunch-with-react APPNAME
+      npm start
+      ```
+      https://github.com/ryansobol/brunch-with-react
+
+      ---
+      # Resources
+      http://ricostacruz.com/cheatsheets/react.html
+      https://github.com/petehunt/rwb
+      https://github.com/petehunt/webpack-howto
+      https://github.com/gatsbyjs/gatsby
+      https://github.com/FormidableLabs/spectacle
+
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
