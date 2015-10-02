@@ -82,14 +82,22 @@
       ---
 
       # Why React?
+      --
+
       - Fast
+      --
+
       - Flexbile
+      --
+
       - Solid principles from Computer Science
       	- [Cohesion](https://en.wikipedia.org/wiki/Single_responsibility_principle) (SRP)
       	- <a href="https://en.wikipedia.org/wiki/Function_composition_(computer_science)">Composition</a>
         - [Reusable components](https://twitter.com/reactjsnpm)
       	- [Immutability](http://reactkungfu.com/2015/08/pros-and-cons-of-using-immutability-with-react-js/)
       	- [Functional Reactive Programming](http://jlongster.com/Removing-User-Interface-Complexity,-or-Why-React-is-Awesome) (FRP)
+      --
+
       - Small API surface = easy to understand and master
 
       ---
@@ -97,7 +105,9 @@
       - Ideally, you have node and webpack already installed
         - brew (or apt-get) install node, or windows download the installer
 
-      - But we will use CodePen to start to make it easy
+      - npm -g install webpack live-server webpack-dev-server
+
+      - But we will use CodePen to start to make it easy!
       ---
       # It's just JavaScript
 
@@ -120,23 +130,78 @@
       # JSX is an Abomination....?
       It *looks like* we are going back to the "bad old days" of mixing style and behavior with semantic markup.
 
+      --
+
       ## JSX is really freakin' awesome and I'm never using anything else
       It actually enables cohesion (clarity) like never before.
 
-
       ---
-      # Props
+      # Properties
       Use props (this.props) to access parameters passed from the parent.
+
+      - Props flow top-down from parent to children
+      --
+
+      - Props can be validated with PropTypes
+      --
+
+      - Props can be set default in the getDefaultProps method
+      --
+
+      - Props can be considered immutable
 
       ---
       # State
       Use states (this.state) to manage dynamic data.
+      --
 
+      - State is internal to the component
+      --
+
+      - State is never set directly, use this.setState();
+      --
+
+      - Best practice: Isolate your state to certain components
       ---
       # State vs. Props
 
+      - Don't store computed values in state
+      - When possible consider props the source of truth
+
       ---
       # Component Lifecycle
+
+      - Instantiation
+      --
+
+      - getDefaultProps
+      --
+
+      - getInitialState
+      --
+
+      - componentWillMount
+      --
+
+      - render
+        - can only access `this.props` and `this.state`
+      --
+
+      - componentDidMount
+        - you can now access the DOM via `this.findDomNode()` (e.g. jQuery)
+      ---
+      # Component Lifecycle: Lifetime
+
+      - componentWillReceiveProps
+      - shouldComponentUpdate
+      - componentWillUpdae
+      - componentDidUpdate
+
+      ---
+      # Component Lifecycle: Teardown &amp; cleanup
+
+      - componentWillUnmount
+
       ---
       # React Router
       ---
